@@ -8,8 +8,16 @@
     {% else %}
     <title>Oops! Something's wrong</title>
     {%  endif %}
+    <link rel="stylesheet" href="/static/css/foundation.min.css">
+    <link rel="stylesheet" href="/static/css/app.css">
 </head>
 <body>
+    <div class="grid-container">
+        <div class="grid-x">
+            {% block content %}
+            {%  endblock %}
+        </div>
+    </div>
 
 </body>
 </html>
