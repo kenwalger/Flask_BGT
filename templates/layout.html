@@ -8,16 +8,35 @@
     {% else %}
     <title>Oops! Something's wrong</title>
     {%  endif %}
-    <link rel="stylesheet" href="/static/css/foundation.min.css">
-    <link rel="stylesheet" href="/static/css/app.css">
+    <link rel="shortcut icon" href="/static/img/favicon.ico"
+          type="image/x-icon"/>
+    <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/static/css/foundation.min.css"/>
+    <link rel="stylesheet" href="/static/css/app.css"/>
 </head>
 <body>
+    {#    Navigation #}
+    <div class="grid-container">
+        <nav aria-label="You are here:" role="navigation">
+            <ul class="menu align-left">
+                <li class="menu-text">Blood Glucose Tracker</li>
+                <li class="is-active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Records</a></li>
+                <li><a href="#">Login/Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    {#    Main Content #}
     <div class="grid-container">
         <div class="grid-x">
             {% block content %}
             {%  endblock %}
         </div>
     </div>
-
+<script src="/static/js/vendor/jquery.js"></script>
+<!-- this will include every plugin and utility required by Foundation -->
+<script src="/static/js/vendor/foundation.min.js"></script>
 </body>
 </html>
